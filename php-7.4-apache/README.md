@@ -9,6 +9,8 @@ need to chmod +x for scripts
 ## build
 
 ```
+sudo docker build ./php-7.4-apache -t php74-apache:v1
+
 sudo docker tag php74-apache:v1 docker.pkg.github.com/kusanagi-jin/footloose-images/php74-apache:v1
 
 sudo docker push docker.pkg.github.com/kusanagi-jin/footloose-images/php74-apache:v1
