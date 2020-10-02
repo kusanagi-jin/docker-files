@@ -67,5 +67,5 @@ RUN sudo mkdir -p /home/drone/.ssh \
 
 USER drone
 ENV PATH /home/drone/.local/bin:/home/drone/bin:${PATH}
-
+WORKDIR /home/drone
 CMD ["/bin/sh"]
