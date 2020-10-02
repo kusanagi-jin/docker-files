@@ -58,6 +58,9 @@ RUN groupadd --gid 3434 drone \
   && echo 'Defaults    env_keep += "DEBIAN_FRONTEND"' >> /etc/sudoers.d/env_keep \
   && sudo usermod -aG docker drone
 
+RUN sudo mkdir -p /home/drone/.ssh \
+  && sudo chmod 700 /home/drone/.ssh \
+  && sudo chown drone:drone /home/drone -R
 # BEGIN IMAGE CUSTOMIZATIONS
 
 # END IMAGE CUSTOMIZATIONS

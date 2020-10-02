@@ -6,11 +6,11 @@ push
 
 cat ~/GH_TOKEN_DOCKER.txt | docker login docker.pkg.github.com -u kusanagi-jin --password-stdin
 
-sudo docker build ./ubuntu-18.04 -t footloose-ubuntu:v1
+docker build ./ubuntu-18.04 -t footloose-ubuntu:v1
 
-sudo docker tag footloose-ubuntu:v1 docker.pkg.github.com/kusanagi-jin/footloose-images/footloose-unbuntu:v1
+docker tag footloose-ubuntu:v1 docker.pkg.github.com/kusanagi-jin/footloose-images/footloose-unbuntu:v1
 
-sudo docker push docker.pkg.github.com/kusanagi-jin/footloose-images/footloose-unbuntu:v1
+docker push docker.pkg.github.com/kusanagi-jin/footloose-images/footloose-unbuntu:v1
 
 docker pull docker.pkg.github.com/kusanagi-jin/footloose-images/footloose-unbuntu:v1
 ```
